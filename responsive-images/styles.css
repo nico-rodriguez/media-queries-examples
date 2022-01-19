@@ -1,0 +1,150 @@
+/* Start: CSS reset */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0px 5px;
+}
+html, body {
+  height: 100%;
+}
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+input, button, textarea, select {
+  font: inherit;
+}
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+#root, #__next {
+  isolation: isolate;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+ul {
+  list-style: none;
+  padding: 0;
+}
+/* End: CSS reset */
+
+
+/* Container */
+.container {
+  height: 100%;
+}
+
+
+/* Header */
+header {
+  height: 10%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.header__name {
+  font-size: larger;
+}
+
+header nav ul {
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+}
+
+header nav li {
+  font-size: large;
+}
+
+@media only screen and (max-width: 650px) {
+  .header__name {
+    font-size: larger;
+  }
+
+  header nav {
+    display: none;
+  }  
+}
+
+
+/* Main */
+main {
+  height: 80%;
+  display: flex;
+  flex-direction: row;
+}
+
+.main__image {
+  width: 50%;
+
+  background-image: url('./public/photo.jpg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.main__text {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  font-size: large;
+}
+
+@media only screen and (max-width: 650px) {
+  main {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .main__image {
+    width: 50%;
+    height: 25%;
+    background-size: cover;
+    border-radius: 50%;
+  }
+
+  .main__text {
+    width: 100%;
+    
+    font-size: medium;
+  }  
+}
+
+
+/* Footer */
+footer {
+  height: 10%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 1vw;
+  padding-right: 2vw;
+}
+
+.footer__logo {
+  width: 5vw;
+}
+
+@media only screen and (max-width: 650px) {
+  footer {
+    justify-content: center;
+  }
+
+  .footer__logo {
+    width: 10vw;
+  }
+}
